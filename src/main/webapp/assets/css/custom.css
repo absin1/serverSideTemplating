@@ -1,7 +1,64 @@
 body {
-  padding-top: 5rem;
+	padding-top: 5rem;
 }
+
 .starter-template {
-  padding: 3rem 1.5rem;
-  text-align: center;
+	text-align: center;
+}
+
+.full_width {
+	width: 100%;
+}
+
+.theme_background {
+	background-color: #eb384f !important;
+}
+
+.theme_color {
+	color: #eb384f !important;
+}
+
+#navbarsExampleDefault > ul > li > a{
+		color: #eb384f !important;
+}
+
+.whitebg{
+	background: white !important;
+}
+
+.border_gray{
+	border-bottom: 1px solid gray;
+	box-shadow: 0 3px 3px rgba(0,0,0,0.12), 0 3px 3px rgba(0,0,0,0.24);
+}
+ .myborder{
+ border: 1px solid gray;
+	box-shadow: 0 3px 3px rgba(0,0,0,0.12), 0 3px 3px rgba(0,0,0,0.24);
+ }
+.mr-6{
+	margin-right: 4rem !important;
+}
+
+.nav_bar_paading{
+padding: .5rem 1rem;
+}
+
+.min-h-60{
+	    min-height: 60px;s
+}
+
+@media only screen and (min-width: 992px) {
+    .make-left {
+       margin-left:auto;
+    }
+    .make-left > a{
+    margin-right: 1.5rem !important;
+    }
+}
+
+.caurosal_button{
+	display:block;
+	width:80%;
+	margin:auto;
+	    margin-top: -4%;
+	    color:white !important;
 }
