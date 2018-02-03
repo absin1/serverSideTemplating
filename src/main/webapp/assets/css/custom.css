@@ -27,7 +27,6 @@ body {
 }
 
 .border_gray{
-	border-bottom: 1px solid gray;
 	box-shadow: 0 3px 3px rgba(0,0,0,0.12), 0 3px 3px rgba(0,0,0,0.24);
 }
  .myborder{
@@ -42,8 +41,8 @@ body {
 padding: .5rem 1rem;
 }
 
-.min-h-60{
-	    min-height: 60px;s
+.min-h-50{
+	    min-height: 50px;
 }
 
 @media only screen and (min-width: 992px) {
@@ -62,3 +61,65 @@ padding: .5rem 1rem;
 	    margin-top: -4%;
 	    color:white !important;
 }
+
+.normal-align{
+	    align-self: normal;
+}
+.hide_div{
+	display: none;
+}
+
+/* start of css for task card caurosal top-right */
+.card-right {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 10%;
+	height: 15%;
+	border-bottom-left-radius: 48px;
+}
+
+.task_icon {
+	width: 25px;
+    height: 26px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 75% 75%;
+}
+
+.schedule_card_color{
+		background-color: #35bdf0 !important;
+}
+.schedule_card_textcolor{
+color: #35bdf0 !important;
+	
+}
+.schedule_card_icon{
+		background-image: url(../image/note.png) !important;
+	
+}
+
+.ongoing_card_icon {
+	background-image: url(../image/ongoing.png) !important;
+}
+
+.ongoing_card_color{
+	background-color: #df756a !important;
+	
+}
+
+.completed_card_icon {
+	background-image: url(../image/ongoing.png) !important;
+}
+.completed_card_color{
+		background-color: #7ed321 !important;
+	
+}
+img{
+	      box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.11), 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+	
+}
+/* end of css for task card caurosal top-right */

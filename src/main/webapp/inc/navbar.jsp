@@ -1,8 +1,8 @@
-<nav class="navbar navbar-toggleable-md navbar-inverse whitebg fixed-top border_gray p-0 min-h-60">
+<nav class="navbar navbar-toggleable-md navbar-inverse whitebg fixed-top border_gray p-0 min-h-50">
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand theme_background p-3 text-center " href="#">Talentify</a>
+      <a class="navbar-brand theme_background  text-center normal-align p-2" href="#">  &nbsp&nbspTalentify&nbsp&nbsp   </a>
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav full_width ">
           <li class="nav-item active">
