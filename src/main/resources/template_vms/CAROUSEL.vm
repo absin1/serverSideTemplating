@@ -1,0 +1,16 @@
+#foreach( $item in $carousels )
+	<div class="card p-2 m-3 border-0" style="width: 20rem;">
+		<div class="myborder">
+			<div class="card-block">
+				<h4 class="card-title">$item.title</h4>
+				<p class="card-text">$item.subtitle</p>
+			</div>
+			<img class="card-img-top" height="30%" width="100%" src="$item.image" alt="Card image cap">
+			<div class="card-block">
+				<p class="card-text">$item.text</p>
+				
+			</div>
+		</div>
+		<a href="$item.buttonUrl" class="btn caurosal_button theme_background">View</a>
+	</div>
+#end
