@@ -1,0 +1,8 @@
+Shoiwng rows for $chart.chartId:
+#foreach( $row in $chart.table )
+	#foreach( $cell in $row )
+		#if( $foreach.count == 1 )
+			$cell
+		#end
+	#end
+#end

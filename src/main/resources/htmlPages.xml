@@ -11,10 +11,7 @@
         <component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="chart" template="CHART">
             <id>1</id>
             <sql>select * from dummy</sql>
-        </component>
-        <component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="chart" template="CHART">
-            <id>2</id>
-            <restURL>http://rest-url.com</restURL>
+            <chartId>chart_div</chartId>
         </component>
         <id>1</id>
     </page>
@@ -22,6 +19,11 @@
         <component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="carousel" template="CAROUSEL">
             <id>1</id>
             <restURL>http://localhost:8080/com/GetDashboardCards</restURL>
+        </component>
+        <component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="chart" template="CHART">
+            <id>1</id>
+            <sql>select * from dummy</sql>
+            <chartId>chart_div</chartId>
         </component>
         <id>2</id>
     </page>

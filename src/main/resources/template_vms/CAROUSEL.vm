@@ -1,3 +1,4 @@
+<div class="slider multiple-items">
 #foreach( $item in $carousels )
 	<div class="card p-2 m-3 border-0" style="width: 20rem;">
 		<div class="myborder">
@@ -14,3 +15,4 @@
 		<a href="$item.buttonUrl" class="btn caurosal_button theme_background">View</a>
 	</div>
 #end
+</div>

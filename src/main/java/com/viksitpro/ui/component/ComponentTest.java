@@ -21,8 +21,8 @@ public class ComponentTest {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		 createHTMLPageXML();
-		//System.err.println(ComponentManager.getInstance().createPage(2));
+		 //createHTMLPageXML();
+		System.err.println(ComponentManager.getInstance().createPage(1));
 		// new ComponentTest().unparseXML();
 		System.exit(0);
 	}

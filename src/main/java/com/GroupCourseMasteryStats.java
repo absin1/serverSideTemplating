@@ -4,7 +4,9 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -13,6 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+import com.viksitpro.ui.component.Chart;
 
 /**
  * Servlet implementation class GroupCourseMasteryStats
@@ -34,41 +37,47 @@ public class GroupCourseMasteryStats extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		String sql = "select percentage_attendance,performance_percentage,course_completion,avg_feedback from group_course_mastery_stats where group_id = 5";
+		String sql = "select course_id, percentage_attendance,performance_percentage,course_completion,avg_feedback from group_course_mastery_stats where group_id = 5";
 		if (request.getParameterMap().containsKey("sql")) {
 			sql = request.getParameter("sql");
 			System.out.println(sql);
 		}
-		if(request.getParameterMap().containsKey("tableHeaders")){
-			
+		if (request.getParameterMap().containsKey("tableHeaders")) {
+
 		}
-		JsonArray runsql = runsql(sql);
-		response.getWriter().append(runsql.toString());
+		//JsonArray runsql = runsql(sql);
+		//response.getWriter().append(runsql.toString());
 	}
 
-	private JsonArray runsql(String sql) {
+	public ArrayList<ArrayList<String>> runsql(String sql) {
+		System.out.println(sql);
 		JsonArray array = new JsonArray();
+		ArrayList<ArrayList<String>> tableBody = new ArrayList<>();
 		try {
 			Class.forName("org.postgresql.Driver");
 			Connection con = DriverManager.getConnection("jdbc:postgresql://business.talentify.in:5432/business_setup",
 					"postgres", "4a626021-e55a");
 			Statement stmt = con.createStatement();
 			ResultSet rs = stmt.executeQuery(sql);
-			// title subtitle image text buttonUrl
+			// Get column headers
+			ResultSetMetaData rsmd = rs.getMetaData();
+			ArrayList<String> tableHead = new ArrayList<>();
+			int i = 0;
+			for (i = 1; i <= rsmd.getColumnCount(); i++)
+				tableHead.add(rsmd.getColumnName(i));
+			tableBody.add(tableHead);
+			// Get table body
 			while (rs.next()) {
-				JsonObject jsonObject = new JsonObject();
-				jsonObject.addProperty("title", rs.getString(1));
-				jsonObject.addProperty("subtitle", rs.getString(4));
-				jsonObject.addProperty("image", "http://cdn.talentify.in:9999" + rs.getString(2));
-				jsonObject.addProperty("text", rs.getString(3));
-				jsonObject.addProperty("buttonUrl",
-						"http://business.talentify.in/edit_Course.jsp?course=" + rs.getString(5));
-				array.add(jsonObject);
+				ArrayList<String> tableRow = new ArrayList<>();
+				for (int j = 1; j < i; j++) {
+					tableRow.add(rs.getString(j));
+				}
+				tableBody.add(tableRow);
 			}
 			con.close();
 		} catch (Exception e) {
 			System.out.println(e);
 		}
-		return array;
+		return tableBody;
 	}
 }

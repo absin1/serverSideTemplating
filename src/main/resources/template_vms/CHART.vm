@@ -1,8 +1,20 @@
-$petList.size() Pets on Sale!
-  We are proud to offer these fine pets
-  at these amazing prices.  This month only,
-  choose from:
-  #foreach( $pet in $petList )
-    $pet[0] for only $pet[1]
-  #end
-   Call Today!
+<div id="$chart.chartId"></div>
+<table class="Displaytable" data-display="$chart.chartId">
+	#foreach( $row in $chart.table )
+	<tr>
+		#if( $foreach.count == 1 )
+			#foreach( $rowHead in $row )
+				<th>$rowHead</th>
+			#end
+		#else
+			#foreach( $rowCell in $row )
+				#if( $foreach.count == 1 )
+					<th>$rowCell</th>
+				#else
+					<td>$rowCell</td>
+				#end
+			#end
+		#end
+	</tr>
+	#end
+</table>

@@ -16,82 +16,11 @@
 		<div class="starter-template">
 			<h1>Bootstrap starter template</h1>
 		</div>
-		<div class="slider multiple-items">
+		
 			<%=ComponentManager.getInstance().createPage(2)%>
-		</div>
+		
 
-		<div id="chart_div"></div>
-		<div id="gg"></div>
-
-		<table class="Displaytable" data-display="chart_div">
-			<tr>
-				<th></th>
-				<th>Forms</th>
-				<th>A</th>
-				<th>B</th>
-				<th>C</th>
-				<th>TotalTime</th>
-			</tr>
-			<tr>
-				<th>Row 1</th>
-				<td>1</td>
-				<td>1</td>
-				<td>1</td>
-				<td>1</td>
-				<td>3</td>
-			</tr>
-			<tr>
-				<th>Row 2</th>
-				<td>2</td>
-				<td>2</td>
-				<td>2</td>
-				<td>2</td>
-				<td>6</td>
-			</tr>
-			<tr>
-				<th>Row 3</th>
-				<td>3</td>
-				<td>3</td>
-				<td>3</td>
-				<td>3</td>
-				<td>9</td>
-			</tr>
-		</table>
-
-		<table class="Displaytable" data-display="gg">
-			<tr>
-				<th></th>
-				<th>Forms</th>
-				<th>A</th>
-				<th>B</th>
-				<th>C</th>
-				<th>TotalTime</th>
-			</tr>
-			<tr>
-				<th>Row 1</th>
-				<td>1</td>
-				<td>1</td>
-				<td>1</td>
-				<td>1</td>
-				<td>3</td>
-			</tr>
-			<tr>
-				<th>Row 2</th>
-				<td>2</td>
-				<td>2</td>
-				<td>2</td>
-				<td>2</td>
-				<td>6</td>
-			</tr>
-			<tr>
-				<th>Row 3</th>
-				<td>3</td>
-				<td>3</td>
-				<td>3</td>
-				<td>3</td>
-				<td>9</td>
-			</tr>
-		</table>
+		
 
 
 	</div>
