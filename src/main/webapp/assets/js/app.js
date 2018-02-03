@@ -53,5 +53,20 @@ $( document ).ready(function() {
     	  });
     	 
     }
+    $(".rateYo").each(function() {
+    	  var rating = $( this ).data( "rating" );
+    	  var star_width = $( this ).data( "star_width" )+'px';
+    	  $( this ).rateYo({
+    	        rating: rating,
+    	        readOnly: true,
+    	        starWidth: star_width
+    	      });
+
+    });
     
-});
+/*    $("#rateYo").rateYo({
+        rating: 3.2,
+        readOnly: true,
+        starWidth: "17px"
+      });
+*/});
