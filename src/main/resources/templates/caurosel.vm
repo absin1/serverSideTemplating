@@ -1,4 +1,4 @@
-<div class="card  p-2 m-2 " style="width: 23rem; min-height: 15rem;">
+<div class="card  p-2 m-2 box-shadow" style="width: 23rem; min-height: 15rem;">
 			<div class=" card-right schedule_card_color"></div>
 			<div class="task_icon schedule_card_icon"></div>
 
