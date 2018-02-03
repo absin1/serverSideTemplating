@@ -4,4 +4,24 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>GetDashboardCards</servlet-name>
+  	<display-name>GetDashboardCards</display-name>
+  	<description></description>
+  	<servlet-class>com.GetDashboardCards</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>GroupCourseMasteryStats</servlet-name>
+  	<display-name>GroupCourseMasteryStats</display-name>
+  	<description></description>
+  	<servlet-class>com.GroupCourseMasteryStats</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>GetDashboardCards</servlet-name>
+  	<url-pattern>/GetDashboardCards</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>GroupCourseMasteryStats</servlet-name>
+  	<url-pattern>/GroupCourseMasteryStats</url-pattern>
+  </servlet-mapping>
 </web-app>

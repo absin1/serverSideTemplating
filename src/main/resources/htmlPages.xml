@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<htmlPageList>
+    <page>
+        <component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="carousel" template="CAROUSEL">
+            <id>1</id>
+            <sql>select category,image_url,course_description,course_name from course limit 10</sql>
+        </component>
+        <id>0</id>
+    </page>
+    <page>
+        <component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="chart" template="CHART">
+            <id>1</id>
+            <sql>select * from dummy</sql>
+        </component>
+        <component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="chart" template="CHART">
+            <id>2</id>
+            <restURL>http://rest-url.com</restURL>
+        </component>
+        <id>1</id>
+    </page>
+    <page>
+        <component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="carousel" template="CAROUSEL">
+            <id>1</id>
+            <restURL>http://localhost:8080/com/GetDashboardCards</restURL>
+        </component>
+        <id>2</id>
+    </page>
+</htmlPageList>
